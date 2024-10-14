@@ -6,13 +6,13 @@
         {
             while (true)
             {
+                // there the start of program
                 Console.Write(">> ");
                 var input = Console.ReadLine().Trim();
                 var whiteSpaceIndex = input.IndexOf(' ');
                 var command = input.Substring(0, whiteSpaceIndex).ToLower();
                 var path = input.Substring(whiteSpaceIndex + 1).Trim();
-                //Console.WriteLine(command);
-                //Console.Write(path);
+
                 if (command == "list")
                 {
                     foreach (var entry in Directory.GetDirectories(path))
